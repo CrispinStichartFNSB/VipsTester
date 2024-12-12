@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="NetVips" Version="3.0.0"/>
+        <PackageReference Include="NetVips.Native.win-x64" Version="8.15.3"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="TestImages\6_pages.tif"/>
+        <Content Include="TestImages\6_pages.tif">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <None Remove="TestImages\invalid_exif_tag.tif"/>
+        <Content Include="TestImages\invalid_exif_tag.tif">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <None Remove="TestImages\triggers_crash.tif"/>
+        <Content Include="TestImages\triggers_crash.tif">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <None Remove="TestImages\very_tall.tif"/>
+        <Content Include="TestImages\very_tall.tif">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <None Remove="TestImages\very_tall_and_very_wide.tiff.tif"/>
+        <Content Include="TestImages\very_tall_and_very_wide.tiff.tif">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <None Remove="TestImages\very_wide.tif"/>
+        <Content Include="TestImages\very_wide.tif">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+</Project>
